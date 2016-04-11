@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Transforming integer values to their written Persian/Farsi text.
+Example: 585242 => پانصد و هشتاد و پنج هزار و دویست و چهل و دو
+
+Author: Sadegh Dalvandi
+Date: 08/04/2016
+www.dalvandi.com
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<script src="intToFarsiText.js"></script>
+        <title>intToFarsiText.js</title>
+    </head>
+	
+	<body style="direction:rtl;">
+		<script>			
+			function toText(p)
+			{
+					var text = intToFarsiText(p);
+					document.getElementById("pricetext").innerHTML = text;
+			
+			}
+		</script>
+		<input type="number" id="price" oninput="toText(this.value);">
+		<div id="pricetext"></div>
+	</body>
+</html>
